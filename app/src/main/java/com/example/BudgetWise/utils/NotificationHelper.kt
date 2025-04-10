@@ -8,8 +8,8 @@ import android.content.Intent
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import com.example.personalfinancetracker.R
-import com.example.personalfinancetracker.activities.MainActivity
+import com.example.BudgetWise.R
+import com.example.BudgetWise.activities.MainActivity
 
 class NotificationHelper(private val context: Context) {
 
@@ -46,7 +46,7 @@ class NotificationHelper(private val context: Context) {
         val threshold = sharedPrefManager.getBudgetThreshold()
 
         if (percentSpent >= threshold) {
-            val intent = Intent(context, MainActivity2::class.java).apply {
+            val intent = Intent(context, MainActivity::class.java).apply {
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             }
 
